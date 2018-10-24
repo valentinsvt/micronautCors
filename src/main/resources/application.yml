@@ -1,3 +1,13 @@
 micronaut:
     application:
         name: sandbox
+    server:
+        cors:
+            enabled: true
+            configurations:
+                    web:
+                        allowedOrigins:
+                        - http://localhost:3000
+                        allowedHeaders:
+                        - Content-Type
+                        - Authorization
