@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: app.sec
+---
+testFramework: spek
+sourceLanguage: kotlin
