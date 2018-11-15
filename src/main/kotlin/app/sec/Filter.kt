@@ -18,7 +18,7 @@ class TraceFilter() : HttpServerFilter {
                 .subscribeOn(Schedulers.io())
                 .switchMap { chain.proceed(request) }
                 .doOnNext { res->
-                    res.headers.add("Access-Control-Allow-Origin", "http://localhost:3000")
+                    res.headers.add("Access-Control-Allow-Origin", "http://localhost")
                     res.headers.add("Access-Control-Allow-Headers", "Authorization")
                 }
     }

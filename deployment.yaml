@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pokemon-bff-deployment
+  labels:
+    app: pokemon-bff-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pokemon-bff
+  template:
+    metadata:
+      labels:
+        app: pokemon-bff
+    spec:
+      containers:
+      - name: pokemon-bff-container
+        image: valentinsvt/demo:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
