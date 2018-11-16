@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: pokemon-bff-container
-        image: valentinsvt/demo:latest
+        image: valentinsvt/pokemonbff:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
